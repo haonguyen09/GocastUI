@@ -1,0 +1,14 @@
+@use "../abstracts" as abs 
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    &-link {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: abs.$text-gray;
+    }
+}

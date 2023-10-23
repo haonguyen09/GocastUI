@@ -1,0 +1,35 @@
+@use "../../abstracts" as abs;
+
+.feed {
+    &-header {
+        @include abs.flex(center, space-between);
+    }
+
+    &-tab {
+        display: flex;
+        white-space: nowrap;
+
+        &-item {
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20;
+            color: abs.$gray1;
+            padding: 10px;
+            border-bottom: 1px solid abs.$gray37;
+        }
+
+        &-item.is-active {
+            color: abs.$primary-color;
+            border-bottom-color: currentColor;
+            font-weight: 600;
+        }
+    }
+
+    &-toggle {
+        color: abs.$gray1;
+        font-size: 14px;
+        font-weight: 500;
+
+    }
+}

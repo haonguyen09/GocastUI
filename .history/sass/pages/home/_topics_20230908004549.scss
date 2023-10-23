@@ -1,0 +1,16 @@
+@use "../../abstracts" as *;
+
+.topic {
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1f));
+        grid-gap: 12px 22px;
+    }
+
+    &-image {
+        @include imgCover ;
+        @include rounded("rounded-x");
+        height: 86px;
+    }
+}

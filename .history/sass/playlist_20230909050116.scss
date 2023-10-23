@@ -1,0 +1,103 @@
+@use "./abstracts" as *;
+
+.playlist {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px 32px;
+
+    &-item {
+        border-radius: 10px;
+        background: var(--playlist-bg, #FFF);
+        box-shadow: var(--playlist-shadow, 
+        -10px 24px 35px 0px rgba(227, 230, 236, 0.25), -1px -3px 14px 0px rgba(227, 230, 236, 0.20));
+        display: flex;
+        padding: 14px 20px;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    &-image {
+        width: 130px;
+        flex-shrink: 0;
+        aspect-ratio: 1;
+        @include rounded("rounded-x");
+    }
+
+    &-content {
+        @include flex(null, null, column, 12px);
+    }
+
+    &-top {
+        @include flex(center, space-between);
+    }
+
+    &-title {
+        font-size: 16px;
+        font-weight: 500;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        word-break:break-work;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: var(--playlist-title, #1b1d21);
+    }
+
+    &-desc, 
+    &-date {
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--playlist-date, #5F6164);
+    }
+
+    &-date {
+        flex-shrink: 0;
+    }
+
+    &-desc {
+        line-height: 1.5;
+    }
+
+    &-bottom {
+        @include flex(center, space-between);
+    }
+
+    &-episodes {
+        @include flex(center, null);
+    }
+
+    &-episode-image {
+        width: 44px;
+        aspect-ratio: 1;
+        @include rounded("rounded-full");
+        object-fit: cover;
+        border: 2px solid var(--bg, #242731);
+    }
+    
+    &-episode-number {
+        font-size: 13px;
+        width: 44px;
+        aspect-ratio: 1;
+        @include rounded("rounded-full");
+        @include flex(center, center);
+        color: var(--white, #fff);
+        background: var(--playlist-episode, #F0F3F6);
+        box-shadow: var(--playlist-shadow, white);
+    }
+
+    &-likes {
+        @include flex(center, null, null, 4px);
+    }
+
+    &-likes-count {
+        color: var(--playlist-like, #a6a7b2);
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    &-episode-item {
+        &:not(:first-child) {
+            margin-left: -15px;
+        }
+    }
+}

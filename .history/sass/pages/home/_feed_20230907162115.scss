@@ -1,0 +1,179 @@
+@use "../../abstracts" as abs;
+
+.feed {
+    &-header {
+        @include abs.flex(center, space-between);
+        container-type: inline-size;
+        container-name: feedHeader;
+        margin-bottom: 40px;
+    }
+
+    &-tab {
+        display: flex;
+        white-space: nowrap;
+
+        &-item {
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.43;
+            color: abs.$gray1;
+            padding: 10px;
+            border-bottom: 1px solid abs.$gray37;
+        }
+
+        &-item.is-active {
+            color: abs.$primary-color;
+            border-bottom-color: currentColor;
+            font-weight: 600;
+        }
+    }
+
+    &-toggle {
+        color: abs.$gray1;
+        font-size: 14px;
+        font-weight: 500;
+        @include abs.flex(center, null, null, 10px);
+        
+
+    }
+
+    @container feedHeader (max-width: 470px) {
+        &-toggle p {
+            display: none;
+        }
+    }
+
+    &-main {
+        container-type: inline-size;
+        container-name: feedMain;
+    }
+
+
+    &-item {
+        border: 1px solid var(abs.$gray-natural2);
+        @include abs.rounded("rounded-x");
+        margin-bottom: 30px;
+
+        & > * {
+            padding: 20px;
+        }
+
+        &-header {
+            @include abs.flex(center, space-between);
+        }
+
+        &-main {
+            border-top: 1px solid var(abs.$gray-natural2);
+            border-bottom: 1px solid var(abs.$gray-natural2);
+            @include abs.flex(center, null, column, 20px);
+        }
+
+        &-content {
+            padding-left: 10px;
+        }
+
+        &-footer {
+            @include abs.flex(center, space-between);
+
+            .button {
+                font-size: 14px;
+            }
+        }
+
+        &-podcast {
+            color: var(abs.$gray2);
+            line-height: 1.5;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        &-heading {
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        &-desc {
+            line-height: 1.5;
+            font-weight: 400;
+            font-size: 13px;
+            margin-top: 16px;
+        }
+    }
+
+    &-image {
+        flex: 0 0 152px;
+        overflow: hidden;
+        aspect-ratio: 1;
+        width: 100%;
+
+        img {
+            @include abs.size(100%);
+            @include abs.rounded("rounded-x");
+            object-fit: cover;
+
+        }
+    }
+
+    &-author {
+        @include abs.flex(center, null, null, 16px);
+
+        &-avatar {
+            @include abs.size(48px);
+            flex: 0 0 48px;
+            position: relative; 
+
+            img {
+                @include abs.size(100%);
+                object-fit: cover;
+                @include abs.rounded("rounded-full");
+            }
+        }
+
+        &-verify {
+            position: absolute;
+            z-index: 2;
+            bottom: -6px;
+            right: 0;
+        }
+
+        &-rating {
+            @include abs.flex(center, null, null, 4px);
+            margin-top: 2px;
+            margin-bottom: 4px;
+
+            span {
+                color: abs.$gray2;
+            }
+        }
+    }
+
+    &-date {
+        font-weight: 400;
+        color: abs.$gray2;
+    }
+
+    &-actions {
+        @include abs.flex(center, null, null, 20px);
+    }
+
+    @container feedMain (min-width: 400px) {
+
+        &-item {
+            &-main {
+                flex-direction: row;
+            }
+        }
+        &-author {
+            &-header {
+                @include abs.flex(center, null, null, 4px);
+                margin-bottom: 4px;
+            }
+
+            &-rating {
+                gap: 10px;
+                margin: 0;
+            }
+        }
+    }
+}

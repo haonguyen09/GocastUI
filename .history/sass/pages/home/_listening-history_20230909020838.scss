@@ -1,0 +1,54 @@
+@use "../../abstracts" as abs;
+
+.listen {
+    @include abs.flex(center, null, null, 11px);
+
+    &-list {
+        @include abs.flex(center, null, column, 18px);
+    }
+
+    &-image {
+
+        img {
+            @include abs.size(109px, 67px);
+            @include abs.rounded("rounded-x");
+            object-fit: cover;
+            flex: 0 0 ;
+        }
+    }
+
+    &-info {
+        flex: 1; 
+        &-text {
+            color: abs.$gray2;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.46;
+        }
+
+        &-name {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.42;
+            margin-bottom: 4px;
+            margin-top: 4px;
+        }
+
+    
+    }
+    &-meta {
+        @include abs.flex(center, null, null, 16px);
+
+        &-item {
+            @include abs.flex(center, null);
+        }
+
+        &-num {
+            color: abs.$gray2;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.46;
+            padding-left: 5px;
+        }
+    }
+}

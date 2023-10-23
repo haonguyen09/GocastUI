@@ -1,0 +1,7 @@
+@use "../../abstracts" as abs;
+
+.feed {
+    &-header {
+        @include abs.flex(center, space-between);
+    }
+}

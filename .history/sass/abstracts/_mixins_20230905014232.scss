@@ -1,0 +1,7 @@
+@mixin bg($value: white) {
+    background-color: $value;
+}
+
+@mixin rounded($value) {
+    border-radius: $value;
+}

@@ -1,0 +1,9 @@
+@use "../abstracts" as abs;
+
+.button {
+    --gap: 10px;
+    @include abs.flex(center, center);
+    gap: var(--gap);
+
+
+} 

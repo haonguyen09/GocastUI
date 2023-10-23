@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.navigation {
+    @include flex(center, space-between);
+
+    &-upload {
+        @include size(44px);
+        @include rounded("rounded-full");
+        background-color: $primary-color;
+        @include flex(center, center);
+
+    }
+}

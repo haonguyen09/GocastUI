@@ -1,0 +1,45 @@
+@use "../../abstracts" as *;
+
+.topic {
+
+    position: relative;
+    @include rounded("rounded-x");
+    overflow: hidden;
+
+
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 12px 22px;
+    }
+
+    &-image {
+        @include imgCover ;
+        border-radius: inherit;
+        height: 86px;
+    }
+
+    &-content {
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background-color: hsla(0deg, 0%, 0%, 0.7);
+    }
+
+    &-title {
+        z-index: 2;
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    &-podcast {
+        z-index: 2;
+        color: white;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+    
+}

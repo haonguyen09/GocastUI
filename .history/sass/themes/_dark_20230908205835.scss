@@ -1,0 +1,10 @@
+:root {
+    --bg-body-color: white;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-body-color: #242731;
+    }
+}

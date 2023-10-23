@@ -1,0 +1,7 @@
+@use "../abstracts";
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: $bg-color;
+}

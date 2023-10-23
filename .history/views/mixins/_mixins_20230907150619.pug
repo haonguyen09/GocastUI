@@ -1,0 +1,66 @@
+mixin menuItem(text, icon = "", href= "#") 
+    li.menu-item
+        a.menu-link(href= href)
+            span.menu-icon 
+                if icon 
+                    case icon
+                        when 'icon-home'
+                            include ../icons/_icon-home 
+                        when 'icon-chart'
+                            include ../icons/_icon-chart 
+                        when 'icon-3dcube'
+                            include ../icons/_icon-3dcube 
+                        when 'icon-play'
+                            include ../icons/_icon-play 
+                        when 'icon-sub'
+                            include ../icons/_icon-sub 
+                        when 'icon-discovery'
+                            include ../icons/_icon-discovery 
+                        when 'icon-micro'
+                            include ../icons/_icon-micro 
+                        when 'icon-team'
+                            include ../icons/_icon-team 
+                        when 'icon-user'
+                            include ../icons/_icon-user 
+                        when 'icon-medal'
+                            include ../icons/_icon-medal 
+            span.menu-text= text
+
+mixin toggle()
+    label.toggle
+        input(type="checkbox", name="") 
+        .toggle-main 
+            .toggle-spinner 
+
+mixin buttonPlay(icon)
+    button.button.button--primary
+        if icon 
+            include ../icons/_icon-play 
+
+mixin feedItem
+    .feed-item 
+        .feed-item-header 
+            .feed-author 
+                .feed-author-avatar  
+                    img(src="./images/feed-user.avif", alt="feed-user")
+                    span.feed-author-verify 
+                        include ../icons/_icon-verify 
+                .feed-author-content 
+                    .feed-author-header
+                        h4.feed-author-name James Killened
+                        .feed-author-rating 
+                            span rated an episude 
+                            img(src="./images/img-rating.png", alt="start")
+                    .feed-date Jun 15th
+            span 
+                include ../icons/_icon-more 
+            
+        .feed-item-main 
+            .feed-image 
+                img(src="./images/img-podcast.avif", alt="image")
+            .feed-item-content 
+                p.feed-item-podcast Perspective Podcast ( EP. 1 ) 
+                h3.feed-item-heading Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik 
+                p.feed-item-desc Play Philosophy vs Religion vs Science: Perspective Podcast ( Ep. 1 )| Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin on desktop and mobile. Play over 256 million tracks for ... 
+        
+        .feed-item-footer 

@@ -1,0 +1,12 @@
+@use "../../abstracts" as abs;
+
+.trending {
+    &-heading {
+        --mb: 11px;
+    }
+
+    &-banner {
+        padding: 20px;
+        border-radius: 10px;
+    }
+}

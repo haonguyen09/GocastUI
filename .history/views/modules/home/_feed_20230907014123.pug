@@ -1,0 +1,12 @@
+.feed 
+    .feed-header
+        .feed-tab 
+            each tab in ["My Feed", "Popular Feed", "Recent"] 
+                .feed-tab-item= tab 
+        .feed-toggle 
+            label.toggle
+                input(type="checkbox", name="") 
+                .toggle-spinner 
+            p New Releases &amp; Guest Only 
+    .feed-main 
+        .feed-item 

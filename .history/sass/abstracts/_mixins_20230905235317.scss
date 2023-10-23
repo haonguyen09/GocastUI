@@ -1,0 +1,16 @@
+@mixin bg($value: white) {
+    background-color: $value;
+}
+
+@mixin rounded($value) {
+    border-radius: $value;
+}
+
+@mixin placeholder($color: white) {
+    &::-webkit-input-placeholder{
+        color: $color;
+    }
+    &::-moz-input-placeholder{
+        color: $color;
+    }
+}

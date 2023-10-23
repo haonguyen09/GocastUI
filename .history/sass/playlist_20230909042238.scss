@@ -1,0 +1,53 @@
+@use "./abstracts" as *;
+
+.playlist {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px 32px;
+
+    &-item {
+        border-radius: 10px;
+        background: var(--playlist-bg, #FFF);
+        box-shadow: var(--playlist-shadow, 
+        -10px 24px 35px 0px rgba(227, 230, 236, 0.25), -1px -3px 14px 0px rgba(227, 230, 236, 0.20));
+        display: flex;
+        padding: 14px 20px;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    &-image {
+        width: 130px;
+        flex-shrink: 0;
+        aspect-ratio: 1;
+        @include rounded("rounded-x");
+    }
+
+    &-content {
+        @include flex(null, null, column, 12px);
+    }
+
+    &-top {
+        @include flex(center, space-between);
+    }
+
+    &-title {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &-desc, 
+    &-date {
+        font-size: 13px;
+        font-weight: 400;
+        color: var(--gray-2, #a6a7b2);
+    }
+
+    &-desc {
+        line-height: 1.5;
+    }
+
+    &-bottom {
+        @include flex(center, space-between);
+    }
+}

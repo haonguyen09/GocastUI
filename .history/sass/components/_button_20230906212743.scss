@@ -1,0 +1,10 @@
+@use "../abstracts" as abs;
+
+.button {
+    --gap: 10px;
+    @include abs.flex(center, center);
+    @include abs.rounded("rounded-lg");
+    gap: var(--gap);
+    font-size: 15px;
+
+} 

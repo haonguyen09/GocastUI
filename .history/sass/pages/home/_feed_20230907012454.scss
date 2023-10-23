@@ -1,0 +1,14 @@
+@use "../../abstracts" as abs;
+
+.feed {
+    &-header {
+        @include abs.flex(center, space-between);
+    }
+
+    &-toggle {
+        @include abs.$gray1;
+        font-size: 14px;
+        font-weight: 500;
+
+    }
+}

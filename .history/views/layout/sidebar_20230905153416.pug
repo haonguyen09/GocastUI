@@ -1,0 +1,15 @@
+aside.sidebar 
+    a.logo(href="/")
+        img(srcSet="./images/logo.png 2x" alt="gocastUI")
+    ul.menu
+        each item in ["Home", "Trending", "Explore Topic", "Playlist", "Subscriptions"]
+            li.menu-item
+                a.menu-link(href="£")
+                    img(src="./images/icons/icon-home.svg", alt="").menu-icon 
+                    span.menu-text= item
+    ul.menu
+        each item in ["Dashboard", "Episodes", "Team", "Subscribers"]
+            li.menu-item
+                a.menu-link(href="£")
+                    img(src="./images/icons/icon-home.svg", alt="").menu-icon 
+                    span.menu-text= item

@@ -1,0 +1,53 @@
+@use "../../abstracts" as abs;
+
+.trending {
+    padding-top: 55px;
+    &-heading {
+        --mb: 11px;
+    }
+
+    &-banner {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: abs.$gray-natural1;
+        @include abs.flex(flex-start, null);
+        position: relative;
+
+    }
+
+    &-content {
+        flex: 0 0 310px;
+    }
+
+    &-title {
+        font-size: 22px;
+        line-height: 1.45;
+        margin-bottom: 11px;
+
+        span {
+            @include abs.textGradient();
+            background-image: abs.$gradient;
+        }
+    }
+
+    &-podcast {
+        font-size: 16px;
+        color: abs.$gray-natural;
+    }
+
+    &-author {
+        font-size: 14px;
+        color: abs.$primary-black;
+        margin-bottom: 20px;
+
+        span {
+            color: abs.$gray-natural;
+        }
+    }
+
+    &-image {
+        position: absolute;
+        right: 0;
+        max-width: 332px;
+    }
+}

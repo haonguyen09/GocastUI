@@ -1,0 +1,22 @@
+@use "../../abstracts" as *;
+
+.follow {
+    @include flex(center, space-between);
+
+    &-user {
+        @include flex(center, null, null, 12px);
+
+        &-avatar {
+            flex: 0 0 46px;
+            aspect-ratio: 1;
+
+            img {
+                @include imgCover ;
+                @include rounded("rounded-lg");
+                box-shadow: 0 0 0 2px white, 0 0 0 3px $secondary;
+            }
+
+        }
+
+    }
+}

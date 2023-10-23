@@ -1,0 +1,6 @@
+@use "../abstracts" as abs;
+
+.toggle {
+    @include abs.size(30px, 17px);
+    @include abs.rounded("rounded-full");
+}

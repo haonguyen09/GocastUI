@@ -1,0 +1,32 @@
+-
+    var menu1 = [
+        {text: "Home", icon: "icon-home", href: "/"},
+        {text: "Trending", icon: "icon-chart", href: "/trending.html"},
+        {text: "Explore Topics", icon: "icon-3dcube"},
+        {text: "Playlist", icon: "icon-play", href: "/playlist.html"},
+        {text: "Subscriptions", icon: "icon-sub"}
+    ];
+    var menu2 = [
+        {text: "Dashboard", icon: "icon-discovery"},
+        {text: "Episodes", icon: "icon-micro"},
+        {text: "Team", icon: "icon-team"},
+        {text: "Subscribers", icon: "icon-user"}
+    ];
+    var menu3 = [
+        {text: "Leaderboard", icon: "icon-medal"},
+    ];
+
+aside.sidebar 
+    a.logo(href="/")
+        include ../icons/_logo
+    ul.menu
+        each item in menu1
+            +menuItem(item.text, item.icon, item.href)
+    ul.menu
+        h3.menu-heading Podcasters 
+        each item in menu2
+            +menuItem(item.text, item.icon, item.href)
+    ul.menu
+        h3.menu-heading Community 
+        each item in menu3
+            +menuItem(item.text, item.icon, item.href)

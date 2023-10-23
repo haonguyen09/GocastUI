@@ -1,0 +1,27 @@
+mixin menuItem(text, icon = "", href= "#") 
+    li.menu-item
+        a.menu-link(href= href)
+            span.menu-icon 
+            if icon 
+                case icon
+                    when 'icon-home'
+                        include ../icons/icon-home 
+                    when 'icon-chart'
+                        include ../icons/icon-chart 
+                    when 'icon-3dcube'
+                        include ../icons/icon-3dcube 
+                    when 'icon-play'
+                        include ../icons/icon-play 
+                    when 'icon-sub'
+                        include ../icons/icon-sub 
+                    when 'icon-discovery'
+                        include ../icons/icon-discovery 
+                    when 'icon-micro'
+                        include ../icons/icon-micro 
+                    when 'icon-team'
+                        include ../icons/icon-team 
+                    when 'icon-user'
+                        include ../icons/icon-user 
+                    when 'icon-medal'
+                        include ../icons/icon-medal 
+            span.menu-text= text

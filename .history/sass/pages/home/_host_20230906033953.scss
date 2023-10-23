@@ -1,0 +1,25 @@
+@use "../../abstracts" as abs;
+
+.host {
+    &-heading {
+        font-size: 16px;
+        font-weight: 600;
+        color: abs.$text-black1;
+        margin-bottom: 20px;
+
+    }
+
+    &-list {
+        @include flex(flex-start, space-between);
+    }
+
+    &-item {
+        @include abs.flex(center, null, column, 7px)
+    }
+
+    &-name {
+        font-size: 14px;
+        color: abs.$gray1;
+    }
+
+}

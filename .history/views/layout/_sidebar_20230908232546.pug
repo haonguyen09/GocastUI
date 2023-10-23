@@ -1,0 +1,14 @@
+aside.sidebar 
+    a.logo(href="/")
+        include ../icons/_logo
+    ul.menu
+        each item in [{text: "Home", icon: "icon-home", href: "/"}, {text: "Trending", icon: "icon-chart", href: "/trending.html" },{text: "Explore topics", icon: "icon-3dcube"},{text: "Playlist", icon: "icon-play"},{text: "Subcriptions", icon: "icon-sub"} ]
+            +menuItem(item.text, item.icon, item.href)
+    ul.menu
+        h3.menu-heading Podcasters 
+        each item in [{text: "Dashboard", icon: "icon-discovery"}, {text: "Episodes", icon: "icon-micro"},{text: "Team", icon: "icon-team"},{text: "Subscribers", icon: "icon-user"} ]
+            +menuItem(item.text, item.icon)
+    ul.menu
+        h3.menu-heading Community 
+        each item in [{text: "Leaderboard", icon: "icon-medal"}]
+            +menuItem(item.text, item.icon)

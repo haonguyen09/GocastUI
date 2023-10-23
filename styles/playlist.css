@@ -1,0 +1,132 @@
+:root {
+  --primary-h: 248;
+  --primary-s: 57%;
+  --primary-l: 60%;
+  --primary-color: hsla(248, 57%, 60%, 1);
+}
+
+.playlist {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 32px;
+}
+@container mainContainer (max-width: 520px) {
+  .playlist {
+    grid-template-columns: 1fr;
+  }
+}
+.playlist-item {
+  border-radius: 10px;
+  background: var(--playlist-bg, #FFF);
+  box-shadow: var(--playlist-shadow, -10px 24px 35px 0px rgba(227, 230, 236, 0.25), -1px -3px 14px 0px rgba(227, 230, 236, 0.2));
+  display: flex;
+  padding: 14px 20px;
+  align-items: flex-start;
+  gap: 10px;
+}
+@container mainContainer (max-width: 900px) {
+  .playlist-item {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .playlist-item .playlist-image {
+    width: 100%;
+  }
+}
+.playlist-image {
+  width: 130px;
+  flex-shrink: 0;
+  height: 130px;
+}
+.playlist-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.playlist-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+.playlist-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 12px;
+}
+.playlist-title {
+  font-size: 16px;
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-work;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--playlist-title, #1b1d21);
+}
+.playlist-desc, .playlist-date {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--playlist-date, #5F6164);
+}
+.playlist-date {
+  flex-shrink: 0;
+}
+.playlist-desc {
+  line-height: 1.5;
+}
+.playlist-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 0;
+}
+.playlist-episodes {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+}
+.playlist-episode-image {
+  width: 44px;
+  aspect-ratio: 1;
+  border-radius: 100rem;
+  object-fit: cover;
+}
+.playlist-episode-number {
+  font-size: 13px;
+  width: 44px;
+  aspect-ratio: 1;
+  border-radius: 100rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 0;
+  color: var(--playlist-num, #5F6164);
+  background: var(--playlist-episode, #F0F3F6);
+}
+.playlist-likes {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.playlist-likes-count {
+  color: var(--playlist-like, #a6a7b2);
+  font-size: 13px;
+  font-weight: 500;
+}
+.playlist-episode-item {
+  box-shadow: var(--playlist-shadow, white);
+  border: 2px solid var(--playlist-border, white);
+}
+.playlist-episode-item:not(:first-child) {
+  margin-left: -15px;
+}
+
+/*# sourceMappingURL=playlist.css.map */

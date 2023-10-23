@@ -1,0 +1,8 @@
+.host 
+    h2.host-heading Popular Hosts 
+    ul.host-list
+        each user in [{color: "hsla(14, 100%, 82%, 1)"}]
+            li.host-item 
+                .host-avatar(style= `background-color: ${user.color}; border: 1px solid ${user.color}`) 
+                    img(srcSet="./images/hot-user.png 2x" alt="thomas")
+                span.host-name Thomas 

@@ -1,0 +1,39 @@
+@use "../../abstracts" as abs;
+
+.listen {
+    @include abs.flex(center, null, null, 18px);
+
+    &-image {
+        @include abs.size(119px, 67px);
+        @include abs.rounded("rounded-x");
+        object-fit: cover;
+        flex: 0 0;
+    }
+
+    &-info {
+
+        &-text {
+            color: abs.$gray2;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.46;
+        }
+
+        &-name {
+            font-weight: 500;
+            line-height: 1.42;
+        }
+
+        &-icon {
+            @include abs.flex(center, null, null, 16px);
+
+        }
+
+        &-num {
+            color: abs.$gray2;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.46;
+        }
+    }
+}

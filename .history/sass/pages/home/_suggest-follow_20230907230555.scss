@@ -1,0 +1,26 @@
+@use "../../abstracts" as abs;
+
+.follow {
+    @include abs.flex(center, space-between);
+
+    &-list {
+        @include abs.flex(null, null, "column", 20px);
+    }
+
+    &-user {
+        @include abs.flex(center, null, null, 12px);
+
+        &-avatar {
+            flex: 0 0 46px;
+            aspect-ratio: 1;
+            box-shadow: 0 0 0 2px white, 0 0 0 3px abs.$secondary;
+
+            img {
+                @include abs.imgCover ;
+                border-radius: inherit;
+            }
+
+        }
+
+    }
+}

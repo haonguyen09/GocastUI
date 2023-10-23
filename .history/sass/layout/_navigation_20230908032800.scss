@@ -1,0 +1,13 @@
+@use "../abstracts" as abs;
+
+.navigation {
+    @include abs.flex(center, space-between);
+
+    &-upload {
+        @include abs.size(44px);
+        @include abs.rounded("rounded-full");
+        background-color: var(--primary-color); 
+        @include abs.flex(center, center);
+
+    }
+}

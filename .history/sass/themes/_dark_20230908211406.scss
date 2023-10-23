@@ -1,0 +1,23 @@
+:root {
+    --bg-body-color: white;
+    --side-bar-color: #e0eef4;
+
+}
+
+body,
+.sidebar,
+.topbar {
+
+    background-color: var(--bg-body-color);
+}
+
+.sidebar {
+    border-right: 1px solid var(--side-bar-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-body-color: #242731;
+        --sidebar-color: #373a43; 
+    }
+}

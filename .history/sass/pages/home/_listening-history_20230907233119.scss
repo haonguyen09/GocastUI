@@ -1,0 +1,15 @@
+@use "../../abstracts" as abs;
+
+.listen {
+    @include abs.flex(center, null, null, 18px);
+
+    &-image {
+        @include abs.size(119px, 67px);
+        @include abs.rounded("rounded-x");
+        object-fit: cover;
+    }
+
+    &-info {
+
+    }
+}

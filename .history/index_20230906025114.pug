@@ -1,0 +1,10 @@
+extend ./views/layout/_dashboard 
+
+append stylesheet
+    link(rel="stylesheet", href="./styles/home.css")
+block title 
+    title GocastUI - HomePage
+block main 
+    .main-home 
+        include ./modules/home/_popular-host 
+        

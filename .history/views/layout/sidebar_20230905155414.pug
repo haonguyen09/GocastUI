@@ -1,0 +1,15 @@
+aside.sidebar 
+    a.logo(href="/")
+        img(srcSet="./images/logo.png 2x" alt="gocastUI")
+    ul.menu
+        each item in ["Home", "Trending", "Explore Topic", "Playlist", "Subscriptions"]
+        each img in ["../images/icons/icon-home.svg", "../images/icons/icon-chart.svg"]
+            +menuItem(item, img)
+    ul.menu
+        h3.menu-heading Podcasters 
+        each item in ["Dashboard", "Episodes", "Team", "Subscribers"]
+            +menuItem(item)
+    ul.menu
+        h3.menu-heading Community 
+        each item in ["Leaderboard"]
+            +menuItem(item)

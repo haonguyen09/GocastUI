@@ -1,0 +1,80 @@
+@use "../../abstracts" as abs;
+
+.trending {
+    padding-top: 55px;
+    container-type: inline-size;
+    container-name: trending;
+    &-heading {
+        --mb: 11px;
+    }
+
+    &-banner {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: abs.$gray-natural1;
+        @include abs.flex(flex-start, null);
+        position: relative;
+
+    }
+
+    &-content {
+        flex: 0 0 310px;
+    }
+
+    &-title {
+        font-size: 22px;
+        line-height: 1.45;
+        margin-bottom: 11px;
+
+        span {
+            @include abs.textGradient();
+            background-image: abs.$gradient;
+        }
+    }
+
+    &-podcast {
+        font-size: 16px;
+        color: abs.$gray-natural;
+    }
+
+    &-author {
+        font-size: 14px;
+        color: abs.$primary-black;
+        margin-bottom: 20px;
+
+        span {
+            color: abs.$gray-natural;
+        }
+    }
+
+    &-image {
+        position: absolute;
+        right: 0;
+        max-width: 332px;
+        bottom: 0;
+        right: 15px;
+    }
+
+    &-vector,
+    &-circle {
+        position: absolute;
+    }
+
+    &-vector {
+        right: 5%;
+        top: 5%;
+        // @include abs.size(30px);
+    }
+
+    &-circle {
+        right: 35%;
+        bottom: 0;
+        // @include abs.size(109px);
+    }
+
+    @container trending (max-width: 630px) {
+        &-image {
+            display: none;
+        }    
+    }
+}
